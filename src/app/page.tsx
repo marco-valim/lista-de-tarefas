@@ -2,13 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@base-ui/react";
+import { Separator } from "@/components/ui/separator";
 import {
   Plus,
   List,
   Check,
   CircleX,
-  SquarePen,
   Trash,
   ListChecks,
   Sigma,
@@ -19,21 +18,13 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { EditTask } from "@/components/edit-task";
 
 const Home = () => {
   return (
@@ -70,21 +61,8 @@ const Home = () => {
               <div className="w-1 h-full bg-green-300"></div>
               <p className="flex-1 px-2 text-sm">Estudar React</p>
               <div className="flex gap-2 items-center">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <SquarePen size={16} className="cursor-pointer" />
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Editar tarefa</DialogTitle>
-                    </DialogHeader>
+                <EditTask />
 
-                    <div className="flex gap-2">
-                      <Input placeholder="Editar tarefa" />
-                      <Button className="cursor-pointer">Editar</Button>
-                    </div>
-                  </DialogContent>
-                </Dialog>
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
@@ -93,7 +71,7 @@ const Home = () => {
               <div className="w-1 h-full bg-green-300"></div>
               <p className="flex-1 px-2 text-sm">Estudar React</p>
               <div className="flex gap-2 items-center">
-                <SquarePen size={16} className="cursor-pointer" />
+                <EditTask />
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
@@ -102,7 +80,7 @@ const Home = () => {
               <div className="w-1 h-full bg-green-300"></div>
               <p className="flex-1 px-2 text-sm">Estudar React</p>
               <div className="flex gap-2 items-center">
-                <SquarePen size={16} className="cursor-pointer" />
+                <EditTask />
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
